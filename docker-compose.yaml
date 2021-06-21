@@ -1,0 +1,10 @@
+version: '3'
+services:
+  vue:
+    build: .
+    image: deftable:0.0.1
+    command: "yarn run serve"
+    ports:
+      - "${NODE_PORT:-8080}:8080"
+    volumes:
+      - ".:/app"
