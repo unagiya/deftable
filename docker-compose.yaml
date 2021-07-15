@@ -1,0 +1,12 @@
+version: '3'
+services:
+  vue_app:
+    build: .
+    image: deftable:0.0.1
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
+    command: ["yarn", "serve"]
