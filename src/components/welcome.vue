@@ -1,21 +1,27 @@
 <template>
   <div class="hello">
     <h1>
-      {{ msg }}
+      {{ message }}
     </h1>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, reactive } from 'vue';
 
 export default defineComponent({
   name: "HelloWorld",
-  data(){
-    return {
-      msg: 'Hello TypeScript',
+  props: {
+    msg: {
+      type: String
     }
   },
+  setup(props) {
+    const message = `${props.msg}. + Vue3`
+    return {
+      message,
+    };
+  }
 });
 </script>
 

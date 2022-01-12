@@ -1,0 +1,36 @@
+info:
+  title: sample database
+  version: 0.0.1
+  description: |
+    This file is a sample database Definition.
+    Describes how to use each item.
+  driver: PostgreSQL
+schema:
+  tables:
+    - name: users
+      comment: User data
+      fields:
+        - name: id
+          type: bigint
+          is_not_null: true
+          is_auto_increment: true
+          comment: This column is PK
+        - name: name
+          type: varchar
+          size: 256
+          is_not_null: true
+    - name: roles
+      comment: role data
+      fields:
+        - name: id
+          type: bigint
+          is_not_null: true
+          is_auto_increment: true
+          comment: This column is PK
+        - name: name
+          type: varchar
+          size: 64
+          is_not_null: true
+        - name: is_deleted
+          type: bool
+          is_not_null: false
