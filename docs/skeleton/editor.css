@@ -14,7 +14,7 @@ a {
 }
 
 .header {
-    background-color: #2A55FF;
+    background-color: #89c3eb;
 }
 
 .header-inner {
@@ -29,13 +29,17 @@ a {
 
 .deftable-editor {
     display: flex;
-
 }
 
 .editor {
     width: 50%;
     height: calc(100vh - 60px);
-
+    border: none;
+    background-color: #2b2b2b;
+    color: #f8f4e6;
+}
+.editor:focus {
+    outline: none;
 }
 
 .viewer {
